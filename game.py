@@ -1,5 +1,6 @@
-import functions.py
-# Path: game.py
-# This game consists of: At the begining of the game, the player chooses a level of difficulty between 1 and 3.
+from random import randint
 
-a = papa()
+def pau(x: int) -> int:
+    return x * 2
+
+print(pau(2))
