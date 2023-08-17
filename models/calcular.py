@@ -38,3 +38,17 @@ class Calc:
     @property
     def result(self: object) -> float: # getter -> 'get_result()'
         return self.__result
+
+    # __str__ method is a special method that is called when an object is printed.
+    def __str__(self: object) -> str:
+        op: str = ''
+        if self.__operation == 1:
+            op = 'Add'
+        elif self.__operation == 2:
+            op = "Subtract"
+        elif self.__operation == 3:
+            op = "Multiply"
+        else:
+            op = "Unknown operation"
+        return f'Value 1: {self.value1} \nValue 2: {self.value2} \nDifficulty: {self.difficulty} \nOperation: {op}'
+
