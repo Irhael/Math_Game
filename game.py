@@ -1,6 +1,12 @@
-from random import randint
+from models.calculator import Calc
 
-def pau(x: int) -> int:
-    return x * 2
+def main() -> None:
+    points: int = 0
+    play(points)
 
-print(pau(2))
+def play(points: int) -> None: #
+    pass
+
+
+if __name__ == '__main__': # This line is used to call the main function when the program is executed.
+    main()
