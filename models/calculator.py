@@ -4,10 +4,11 @@ from random import randint
 # The class Calc is a model that represents a calculator.
 class Calc:
     # __init__ method is a special method that is called when an object is created from a class.
-    # The first parameter of a method is always the object itself. By convention, it is called self.
+    # A method is a function that is defined inside a class.
+    # The first parameter of a method is always the object itself(Calc). By convention, it is called self.
     # A private attribute(self.__attribute) is one that can only be accessed within the class itself.
     # A public attribute(self.attribute) is one that can be accessed from outside the class.
-    def __init__(self: object, difficulty: int, /) -> None:  # The / is used to indicate that the parameters before it
+    def __init__(self: object, difficulty: int, /) -> None:  # The / is used to indicate that the parameters before it is positional-only.
         self.__difficulty: int = difficulty  # In this case, the class is Calc and the attribute is __difficulty.
         self.__value1: int = self.create_value  # The first value of the operation.
         self.__value2: int = self.create_value  # The second value of the operation.
@@ -15,7 +16,6 @@ class Calc:
         self.__result: float = self.create_result  # The result of the operation.
 
     # Creating getter properties for the private attributes
-
     # The @property decorator is used to give some methods especial functions and make them act like getters and
     # setters. A getter is a method that gets the value of a property. A setter is a method that sets the value of a
     # property.
@@ -41,8 +41,9 @@ class Calc:
         return self.__result
 
     # __str__ method is a special method that is called when an object is printed.
+    # Selecting the operation based on the value of the attribute __operation.
     def __str__(self: object) -> str:
-        op: str = ''
+        op: str = '' # Initializing the variable op.
         if self.__operation == 1:
             op = 'Add'
         elif self.__operation == 2:
@@ -66,6 +67,5 @@ class Calc:
     # The check_result method checks if the answer is correct.
     def check_result(self: object, answer: int) -> bool:
         pass
-
     def show_operation(self: object) -> None:
         pass
