@@ -1,4 +1,4 @@
-from models.calculator import Calc
+from models.calculator import Calculate
 
 def main() -> None:
     points: int = 0
@@ -6,7 +6,7 @@ def main() -> None:
 
 def play(points: int) -> None: #
     difficulty: int = int(input('Enter the difficulty level[1, 2, 3 or 4]: '))
-    calc: Calc = calc(difficulty) # Creating an object of the class Calc.
+    calc: Calculate = Calculate(difficulty) # Creating an object of the class Calc.
     print("Enter the result for the following operation: ")
     calc.show_operation() # Showing the operation to the player.
 

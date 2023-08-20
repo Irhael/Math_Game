@@ -2,7 +2,7 @@ from random import randint
 
 
 # The class Calc is a model that represents a calculator.
-class Calc:
+class Calculate:
     # __init__ method is a special method that is called when an object is created from a class.
     # A method is a function that is defined inside a class.
     # The first parameter of a method is always the object itself(Calc). By convention, it is called self.
@@ -97,11 +97,11 @@ class Calc:
     def check_result(self: object, answer: int) -> bool:
 
         if self.__result == answer:
-            print("Wrong answer!")
+            print("Right answer!")
             print(f'{self.__value1} {self._operation_symbol} {self.__value2} = {self.__result}')
             return True
         else:
-            print("Right answer!")
+            print("Wrong answer!")
             print(f'{self.__value1} {self._operation_symbol} {self.__value2} = {self.__result}')
             return False
         
