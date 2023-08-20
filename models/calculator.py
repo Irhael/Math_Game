@@ -72,7 +72,14 @@ class Calc:
     @property
     # The create_result method creates the result of the operation.
     def create_result(self: object) -> int:
-     
+        if self.__operation == 1: # If the operation is add, the result is the sum of the values.
+            return self.__value1 + self.__value2
+        elif self.__operation == 2: # If the operation is subtract, the result is the difference of the values.
+            return self.__value1 - self.__value2
+        elif self.__operation == 3: # If the operation is multiply, the result is the product of the values.
+            return self.__value1 * self.__value2
+        else:
+            return 0
 
     # The check_result method checks if the answer is correct.
     def check_result(self: object, answer: int) -> bool:
