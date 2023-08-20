@@ -81,8 +81,23 @@ class Calc:
         else:
             return 0
 
+    @property
+    def _operation_symbol(self: object) -> str:
+        if self.__operation == 1:
+            return '+'
+        elif self.__operation == 2:
+            return '-'
+        elif self.__operation == 3:
+            return '*'
+        else:
+            return 'Unknown operation!'
     # The check_result method checks if the answer is correct.
     def check_result(self: object, answer: int) -> bool:
-        pass
+        if self.__result == answer:
+            return True
+        else:
+            return False
+
+    # The show_operation method shows the operation to the player.
     def show_operation(self: object) -> None:
         pass
