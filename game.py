@@ -9,7 +9,9 @@ def play(points: int) -> None: #
     calc: Calc = calc(difficulty) # Creating an object of the class Calc.
     print("Enter the result for the following operation: ")
     calc.show_operation() # Showing the operation to the player.
+
     answer: int = int(input())
+    
     if calc.check_result(answer): # If the answer is correct, the player earns 1 point.
         points += 1
         print(f'Congratulations, you owned 1 point. You have {points} points(s).')

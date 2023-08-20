@@ -57,12 +57,22 @@ class Calc:
     @property
     # The create_value method creates a random value based on the difficulty.
     def create_value(self: object) -> int:
-        pass
+        if self.__difficulty == 1:
+            return randint(0, 10)
+        elif self.__difficulty == 2:
+            return randint(0, 100)
+        elif self.__difficulty == 3:
+            return randint(0, 1000) 
+        elif self.__difficulty == 4:
+            return randint(0, 10000)
+        else:
+            return randint(0, 100000)
+        
 
     @property
     # The create_result method creates the result of the operation.
     def create_result(self: object) -> int:
-        pass
+     
 
     # The check_result method checks if the answer is correct.
     def check_result(self: object, answer: int) -> bool:
