@@ -23,19 +23,7 @@ def play(points: int) -> None: #
     else:
         print(f'You earned {points} point(s).')
         print('Thanks for playing.')
-        exit(0)
-
-
-
-
-
-
-
-
-
-
-
-
+        exit(0)      
         
 # __name__ is a special variable that gets the name of the module that is being executed.
 if __name__ == '__main__': # This line is used to call the main function when the program is executed.
